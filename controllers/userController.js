@@ -1,20 +1,25 @@
-const fs = require('fs');
-const path = require('../data/users.json');
+const UserService = require('../services/UserService');
 
-const readUsers = () => {
-    return JSON.parse(fs.readFileSync(path));
-};
+class userController {
+    // Get all user
+    getUsers(req, res) {
+        try {
+            const users = UserService.getUsers();
+            res.json(users);
+        } catch(error) {
+            res.status(500).json({ message: error.message });
+        }
+    }
 
-const writeUsers = () => {
-    fs.writeFileSync(path, JSON.stringify(users, null, 2));
-}
-
-module.exports = {
-    createUser: (req, res) => {
-        const users = readUsers();
-        const newUser = { id: Date.now(), ...req.body };
-        users.push(newUser);
-        writeUsers(users);
-        res.status(201).json(newUser)
+    // Add a user
+    addUser(req, res) {
+        try{
+            const newUser = UserService.addUser(req.body);
+            res.status(201).json(newUser);
+        } catch(error) {
+            res.status(500).json({ message: error.message });
+        }
     }
 }
+
+module.exports = new userController();

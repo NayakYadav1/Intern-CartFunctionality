@@ -1,9 +1,12 @@
 [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john@example.com",
-      "cart": []
-    }
+  {
+    "name": "Nayak",
+    "email": "nayak@gmail.com",
+    "id": 1
+  },
+  {
+    "name": "Arun",
+    "email": "arun@gmail.com",
+    "id": 2
+  }
 ]
-  

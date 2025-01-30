@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "userId": 1,
+    "products": [
+      {
+        "productId": 1,
+        "name": "Laptop",
+        "price": 1000
+      }
+    ],
+    "orderId": 1,
+    "totalPrice": 1000
+  },
+  {
+    "userId": 1,
+    "products": [
+      {
+        "productId": 2,
+        "name": "Table",
+        "price": 500
+      }
+    ],
+    "orderId": 2,
+    "totalPrice": 500
+  },
+  {
+    "userId": 1,
+    "products": [
+      {
+        "productId": 1,
+        "name": "Table",
+        "price": 500
+      }
+    ],
+    "orderId": 3,
+    "totalPrice": 500
+  }
+]

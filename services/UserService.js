@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('../data/users.json');
+const path = require('path');
 
 class UserService {
     constructor() {
@@ -15,7 +15,7 @@ class UserService {
     // Add a new User
     addUser(user) {
         const users = this.getUsers();
-        user.id = Date.now();
+        user.id = users.length + 1;
         users.push(user);
         fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2));
         return user;

@@ -8,5 +8,10 @@
     "name": "Arun",
     "email": "arun@gmail.com",
     "id": 2
+  },
+  {
+    "name": "Allan",
+    "email": "allan@gmail.com",
+    "id": 3
   }
 ]
